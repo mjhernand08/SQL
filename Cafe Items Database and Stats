@@ -1,0 +1,19 @@
+--Create a cafe items database
+
+CREATE TABLE cafe_items (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER);
+
+INSERT INTO cafe_items VALUES (1, "light roast coffee", 2.00, 5),
+(2, "medium roast coffee", 2.00, 5),
+(3, "dark roast coffee", 2.00, 5),
+(4, "coffee cake", 1.50, 3),
+(5, "glazed donut", 1.00, 12);
+
+--add total number of cafe items by quantity.
+SELECT SUM(quantity) FROM cafe_items;
+
+--list cafe items by price from least to greatest.
+SELECT * FROM cafe_items ORDER BY price ASC;
+
+--list cafe items by quantity from greatest to least.
+SELECT * FROM cafe_items ORDER BY quantity DESC;
+
